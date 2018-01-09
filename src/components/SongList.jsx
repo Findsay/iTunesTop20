@@ -5,8 +5,8 @@ const SongList = ({songs}) => {
   if ( !songs ) {
     return null
   } else {
-    const songNodes = songs.map(song => {
-      return ( <Song song={song} /> )
+    const songNodes = songs.map((song, index) => {
+      return ( <Song song={song} key={index} /> )
     });
 
     return (

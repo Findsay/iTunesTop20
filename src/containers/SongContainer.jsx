@@ -24,8 +24,6 @@ class SongContainer extends React.Component {
   }
 
   render(){
-    const songs = this.state.topSongs
-
     return(
       <SongList songs={this.state.topSongs}/>
     )
