@@ -1,4 +1,5 @@
 import React from 'react';
+import SongList from '../components/SongList.jsx';
 
 class SongContainer extends React.Component {
   constructor(props){
@@ -10,9 +11,7 @@ class SongContainer extends React.Component {
 
   render(){
     return(
-      <div>
-        I am a song container
-      </div>
+      <SongList/>
     )
   }
 }
