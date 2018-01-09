@@ -5,7 +5,7 @@ class SongContainer extends React.Component {
   constructor(props){
     super(props);
     this.state = {
-      topSongs:[],
+      topSongs: null,
     };
   }
 
@@ -17,15 +17,17 @@ class SongContainer extends React.Component {
       if (request.status === 200) {
         const jsonString = request.responseText;
         const data = JSON.parse(jsonString);
-        this.setState({ topSongs: data });
+        this.setState({ topSongs: data.feed.entry });
       }
     });
     request.send();
   }
 
   render(){
+    const songs = this.state.topSongs
+
     return(
-      <SongList/>
+      <SongList songs={this.state.topSongs}/>
     )
   }
 }

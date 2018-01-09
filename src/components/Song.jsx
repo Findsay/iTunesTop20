@@ -4,7 +4,7 @@ const Song = ({song}) => {
 
   return (
     <li>
-      I am a song
+      song.im:name
     </li>
   )
 
