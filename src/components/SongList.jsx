@@ -1,9 +1,12 @@
 import React from 'react';
+import Song from '../components/Song.jsx';
 
 const SongList = ({songs}) => {
 
   return (
-    <h3>I am a song list</h3>
+    <ol>
+      <Song/>
+    </ol>
   )
 
 }
